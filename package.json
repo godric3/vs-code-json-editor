@@ -10,7 +10,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:vs-code-json-editor.helloWorld"
+		"onCommand:vs-code-json-editor.helloWorld",
+		"onCustomEditor:vscode-json-editor.json"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -18,6 +19,18 @@
 			{
 				"command": "vs-code-json-editor.helloWorld",
 				"title": "Hello World"
+			}
+		],
+		"customEditors": [
+			{
+				"viewType": "vscode-json-editor.json",
+				"displayName": "Json editor",
+				"selector": [
+					{
+						"filenamePattern": "*.json"
+					}
+				],
+				"priority": "option"
 			}
 		]
 	},
@@ -41,5 +54,8 @@
 		"mocha": "^9.1.1",
 		"typescript": "^4.4.3",
 		"@vscode/test-electron": "^1.6.2"
+	},
+	"dependencies": {
+		"@json-editor/json-editor": "^2.5.4"
 	}
 }
