@@ -96,7 +96,7 @@ export class JsonEditorProvider implements vscode.CustomTextEditorProvider {
 		// 	this.context.extensionUri, 'media', 'vscode.css'));
 
 		const styleUri = webview.asWebviewUri(vscode.Uri.joinPath(
-			this.context.extensionUri, 'bootstrap.min.css'));
+			this.context.extensionUri, 'node_modules','bootstrap','dist','css', 'bootstrap.min.css'));
 
 		// Use a nonce to whitelist which scripts can be run
 		//const nonce = getNonce();
