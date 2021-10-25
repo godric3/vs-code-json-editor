@@ -105,9 +105,9 @@ export class JsonEditorProvider implements vscode.CustomTextEditorProvider {
         <!DOCTYPE html>
         <html lang="en">
         <head>
-            <meta charset="UTF-8">
-			<script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.min.js"></script>
-			<link href="${styleUri}" rel="stylesheet" />
+		<meta charset="UTF-8">
+		<script type="module" src="${scriptUri}"></script>
+		<link href="${styleUri}" rel="stylesheet" />
             <title>JSON editor</title>
         </head>
         <body>
@@ -118,7 +118,6 @@ export class JsonEditorProvider implements vscode.CustomTextEditorProvider {
             </div>
             <div id="editor">TEST</div>
 			<script  src="${jsonEditorUri}"></script>
-			<script  src="${scriptUri}"></script>
         </body>
         </html>`;
 		// return /* html */`

@@ -4,8 +4,8 @@
 (function () {
     console.log('here');
     // var JSONEditor = require('@json-editor/json-editor');
-    
-    console.log(JSONEditor);
+	    
+    console.log(window.JSONEditor);
 	// Get a reference to the VS Code webview api.
 	// We use this API to post messages back to our extension.
 
@@ -89,10 +89,10 @@ console.log(editor);
 			// errorContainer.style.display = '';
 			return;
         }
-        editor =/** @type {JSONEditor} */ new JSONEditor(element,{
+        editor =/** @type {JSONEditor} */ new window.JSONEditor(element,{
             schema: json,
             theme: 'bootstrap4'
-          });
+		});
 		// notesContainer.style.display = '';
 		// errorContainer.style.display = 'none';
 
